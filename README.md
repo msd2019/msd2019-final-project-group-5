@@ -1,6 +1,9 @@
 # Final Project for Modeling Social Data, 2019
 
-< YOUR NAMES (AND UNIS) >
+
+Lina Tian yt2511
+Lily Ma jm4303
+Wen Ding wd2288
 
 This repository has code to attempt to replicate and extend the results in < PAPER TITLE > by < ORIGINAL AUTHORS >, < PUBLISHED IN >.
 

@@ -1,0 +1,48 @@
+---
+title: "Moving_window_Wen"
+author: "Wen Ding"
+date: "May 9, 2019"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r, warning=FALSE}
+source("../oosf.R")
+library(dyn)
+# read data
+dat <- read.csv("merged.csv")
+d <- zoo(dat[,-1],as.Date(dat[,1]))
+y <- log(d$sales)
+# out of sample forecasts
+x <- d[,c("suvs","insurance")]
+
+z_1mw <- OutOfSampleForecast0112_mw(y,x,24)
+z_112 <- OutOfSampleForecast12(y,x,24)
+z_12 = OutOfSampleForecast1_2(y,x,24)
+z_1mw.ts <- ts(z_1mw,start=1,freq=12)
+z_112.ts <- ts(z_112,start=1,freq=12)
+z_12.ts <- ts(z_12,start=1,freq=12)
+res112 <- z_112.ts[,1]-z_112.ts[,3]
+res1mw <- z_1mw.ts[,1]-z_1mw.ts[,3]
+res12 <- z_12.ts[,1]-z_12.ts[,3] 
+# MAE for AR1 model
+mean(abs(res112))
+# MAE for moving window model
+mean(abs(res1mw))
+# MAE for lag1 and lag2 model
+mean(abs(res12))
+
+# chart
+
+layout(matrix(c(1,2,3,4)),heights=c(5,1))
+ts.plot(z_112.ts[,1],z_112.ts[,3],z_1mw.ts[,3],z_12.ts[,3],col=1:4,lty=1:4,ylab="log(sales)",
+        main="Sales, predicted with AR and google trend and with moving windows") 
+#ts.plot(abs(res0)-abs(res1),type="h",ylab="diff error",main="Base - trends absolute forecast error")
+#ts.plot(abs(res0),type="h",ylab="diff error",main="Base - trends absolute forecast error")
+
+legend("bottomleft",legend=c("Actual Sales","Predicted with AR and Google Trend","Moving Window","yn--yn-1+yn-2"), lty=1:4,col=1:4)
+
+
+```
+
