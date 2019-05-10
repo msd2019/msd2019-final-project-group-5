@@ -7,8 +7,9 @@ output: pdf_document
 
 ##Paper's code, paper's data
 ```{r}
+library(here)
 library(dyn)
-dat <- read.csv("merged.csv")
+dat <- read.csv(here("data/merged.csv"))
 d <- zoo(dat[,-1],as.Date(dat[,1]))
 
 y <- log(d$sales)
@@ -39,7 +40,7 @@ MaeReport(z,"2007-12-01","2009-06-30")
 
 ##Paper's code, our data 2014-2019
 ```{r}
-merged1419 <- read.csv("merged_14_19.csv")
+merged1419 <- read.csv(here("data/merged_14_19.csv"))
 d1419 <- zoo(merged1419[,-1],as.Date(merged1419[,1]))
 
 y1419 <- log(d1419$sales)
