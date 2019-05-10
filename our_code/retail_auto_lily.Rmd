@@ -1,0 +1,123 @@
+---
+title: "Retail_auto"
+output: pdf_document
+---
+
+##By Lily
+#same model, new data (2014-2019) but without transforming Google Trend data
+```{r, df with lag}
+new_merged <- read.csv("merged_new.csv", header = TRUE)
+head(new_merged)
+sapply(new_merged, mode)
+
+#transform date to string then to date format 
+#new_merged <- transform(new_merged, sales=as.numeric(sales))
+date<- as.Date(new_merged$date, format = "%m/%d/%y")
+new_merged$date <- date
+sapply(new_merged, mode)
+
+#transform data using Jake's method; for later use
+new_merged$suv_ <- log(new_merged$suv_index/100)
+new_merged$insurance_ <- log(new_merged$insurance_index/100)
+
+
+class(new_merged$sales)
+sales <- as.character(new_merged$sales) #unfactor sales
+sales <- as.numeric(gsub(",","", sales)) #remove commas
+#log sales
+new_merged$sales <- log(sales)
+
+len <- length(new_merged$sales)
+#lag -1
+t1 <- new_merged$sales[2:len]
+#lag -12
+t12 <- new_merged$sales[13:len]
+
+#new merged with lag-1, lag-12
+merged_with_lag <- new_merged[1: length(t12),]
+merged_with_lag$lag_1 = t1[1: length(t12)]
+merged_with_lag$lag_12 =  t12[1:length(t12)]
+
+#tail(new_merged,20)
+#tail(merged_with_lag, 12)
+```
+
+```{r new base model}
+reg0_new <- lm(sales~lag_1 + lag_12, data=merged_with_lag)
+summary(reg0_new)
+```
+
+```{r new trend model}
+reg1_new<- lm(sales~lag_1 + lag_12 + suv_index + insurance_index, data=merged_with_lag)
+summary(reg1_new)
+```
+
+```{r, mae}
+source("oosf.R")
+merged_zoo <- zoo(new_merged[,-1], as.Date(new_merged[,1]))
+y_new <- merged_zoo$sales
+x_new <- merged_zoo[,c(2,3)]
+z_new <- OutOfSampleForecast12(y_new,x_new,17) #returns prediction from week18 on, rolling window
+z_new_fixed <- OutOfSampleForecast12_fixed(y_new,x_new,24) #returns prediction based on 24 week fixed window
+
+# overall fit
+MaeReport(z_new)
+MaeReport(z_new_fixed)
+#MaeReport(z_new,"2007-12-01","2009-06-30")
+```
+
+##Transform Trend Data based on Jake's method
+
+```{r new trend model transformed}
+reg1_new<- lm(sales~lag_1 + lag_12 + suv_ + insurance_, data=merged_with_lag)
+summary(reg1_new)
+
+x_new_trans <- merged_zoo[,c(4,5)]
+z_new_trans <- OutOfSampleForecast12(y_new,x_new_trans,17) #returns prediction from week18 on, rolling window
+z_new_trans_fixed <- OutOfSampleForecast12_fixed(y_new,x_new_trans,24) #returns prediction based on 24-week fixed window
+
+MaeReport(z_new_trans)
+MaeReport(z_new_trans_fixed)
+```
+
+##Paper's method
+```{r base model}
+library(dyn)
+dat <- read.csv("merged.csv")
+d <- zoo(dat[,-1],as.Date(dat[,1]))
+y <- log(d$sales)
+
+# baseline model
+reg0 <- dyn$lm(y~lag(y,-1)+lag(y,-12))
+summary(reg0)
+```
+
+```{r trend model}
+reg1 <- dyn$lm(y~lag(y,-1)+lag(y,-12)+suvs+insurance,data=dat)
+summary(reg1)
+```
+
+```{r, plot}
+y <- log(d$sales)
+x <- d[,c(2,3)]
+z <- OutOfSampleForecast12(y,x,17)
+z_fixed <- OutOfSampleForecast12_fixed(y,x,24)
+
+# overall fit
+MaeReport(z)
+MaeReport(z,"2007-12-01","2009-06-30")
+
+MaeReport(z_fixed)
+MaeReport(z_fixed,"2007-12-01","2009-06-30")
+
+```
+
+```{r}
+plot(z,plot.type="sin",col=c(1,1,"gray40"),lty=c(1,2,1),main="Motor Vehicles and Parts",ylab="log(mvp)",lwd=c(1.5,1,1))
+legend("topright",c("actual","base","trends"),lty=c(1,2,1),col=c(1,1,"gray40"),lwd=c(1.5,1,1))
+legend("bottomleft",c("MAE improvement","Overall = 10.5%","During recession = 21.5%"))
+````
+
+
+
+
