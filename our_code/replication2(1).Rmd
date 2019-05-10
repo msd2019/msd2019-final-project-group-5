@@ -1,0 +1,95 @@
+---
+title: "Replication 2"
+author: "Jiayi Lily Ma (jm4303)"
+date: "5/10/2019"
+output: pdf_document
+---
+
+##Paper's code, paper's data
+```{r}
+library(dyn)
+dat <- read.csv("merged.csv")
+d <- zoo(dat[,-1],as.Date(dat[,1]))
+
+y <- log(d$sales)
+x <- d[,c(2,3)]
+```
+
+#Paper's base model
+```{r}
+#base model
+reg0 <- dyn$lm(y~lag(y,-1)+lag(y,-12))
+summary(reg0)
+```
+
+```{r}
+#trend model 
+reg1 <- dyn$lm(y~lag(y,-1)+lag(y,-12)+suvs+insurance,data=dat)
+summary(reg1)
+```
+
+```{r}
+source("../oosf.R")
+z <- OutOfSampleForecast12(y,x,17)
+#overall fit 
+MaeReport(z)
+MaeReport(z,"2007-12-01","2009-06-30")
+```
+
+
+##Paper's code, our data 2014-2019
+```{r}
+merged1419 <- read.csv("merged_14_19.csv")
+d1419 <- zoo(merged1419[,-1],as.Date(merged1419[,1]))
+
+y1419 <- log(d1419$sales)
+x1419 <- d1419[,c(2,3)]
+```
+
+```{r}
+#base model 
+reg0_14_19 <- dyn$lm(y1419~lag(y1419,-1)+lag(y1419,-12), data=merged1419)
+summary(reg0_14_19)
+```
+
+```{r}
+#trend model 
+reg1_14_19 <- dyn$lm(y1419~lag(y1419,-1)+lag(y1419,-12)+suvs+insurance,data=merged1419)
+summary(reg1_14_19)
+```
+
+```{r}
+source("../oosf.R")
+z1419 <- OutOfSampleForecast12(y1419,x1419,17)
+MaeReport(z1419)
+```
+
+##rescale Google trend's data using log(x/100), data 2014-2019
+```{r}
+head(merged1419)
+suvs_rescaled <- log(merged1419$suvs/100)
+insurance_rescaled <- log(merged1419$insurance/100)
+
+merged1419$suvs_rescaled <- suvs_rescaled 
+merged1419$insurance_rescaled <- insurance_rescaled
+head(merged1419)
+```
+
+```{r}
+d1419 <- zoo(merged1419[,-1],as.Date(merged1419[,1]))
+
+y1419 <- log(d1419$sales)
+x1419 <- d1419[,c(4,5)]
+```
+
+```{r}
+#trend model 
+reg1419_rescaled <- dyn$lm(y1419~lag(y1419,-1)+lag(y1419,-12)+suvs_rescaled+insurance_rescaled,data=merged1419)
+summary(reg1419_rescaled)
+```
+
+```{r}
+source("../oosf.R")
+z1419_rescaled <- OutOfSampleForecast12(y1419,x1419,17)
+MaeReport(z1419_rescaled)
+```
