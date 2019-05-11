@@ -1,0 +1,220 @@
+\begin{thebibliography}{30}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Askitas and Zimmermann(2010)]{Askitas10}
+Nikos Askitas and Klaus~F. Zimmermann.
+\newblock {G}oogle econometrics and unemployment forecasting.
+\newblock Technical report, SSRN 899, 2010.
+\newblock URL \url{http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1465341}.
+
+\bibitem[Baker and Fradkin(2011)]{Baker11}
+Scott Baker and Andry Fradkin.
+\newblock What drives job search? {E}vidence from {G}oogle search data.
+\newblock Technical report, Stanford University, 2011.
+\newblock URL \url{http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1811247}.
+
+\bibitem[Brownstein et~al.(2009)Brownstein, Freifeld, and Madoff]{Brownstein09}
+John~S. Brownstein, Clark~C. Freifeld, and Lawrence~C. Madoff.
+\newblock Digital disease detection---harnessing the web for public health
+  surveillance.
+\newblock \emph{New England Journal of Medicine}, 2009.
+\newblock URL \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2917042/}.
+
+\bibitem[Castle et~al.(2009)Castle, Fawcett, and Hendry]{Castle09}
+Jennifer~L. Castle, Nicholas W.~P. Fawcett, and David~F. Hendry.
+\newblock Nowcasting is not just contemporaneous forecasting.
+\newblock \emph{National Institute Economic Review}, 201\penalty0 (1):\penalty0
+  71--89, October 2009.
+\newblock URL \url{http://ner.sagepub.com/content/210/1/71.abstract}.
+
+\bibitem[Castle et~al.(2010)Castle, Fawcett, and Hendry]{Castle10}
+Jennifer~L. Castle, Nicholas W.~P. Fawcett, and David~F. Hendry.
+\newblock Evaluating automatic model selection.
+\newblock Technical Report 474, Department of Economics, University of Oxford,
+  2010.
+\newblock URL \url{http://economics.ouls.ox.ac.uk/14734/1/paper474.pdf}.
+
+\bibitem[Choi and Varian(2009{\natexlab{a}})]{Choi09a}
+Hyunyoung Choi and Hal Varian.
+\newblock Predicting the present with {G}oogle {T}rends.
+\newblock Technical report, Google, 2009{\natexlab{a}}.
+\newblock URL
+  \url{http://google.com/googleblogs/pdfs/google_predicting_the_present.pdf}.
+
+\bibitem[Choi and Varian(2009{\natexlab{b}})]{Choi09b}
+Hyunyoung Choi and Hal Varian.
+\newblock Predicting initial claims for unemployment insurance using {G}oogle
+  {T}rends.
+\newblock Technical report, Google, 2009{\natexlab{b}}.
+\newblock URL
+  \url{http://research.google.com/archive/papers/initialclaimsUS.pdf}.
+
+\bibitem[Cooper et~al.(2005)Cooper, Mallon, Leadbetter, Pollack, and
+  Peipins]{Cooper05}
+C.~Cooper, K.~Mallon, S.~Leadbetter, L.~Pollack, and L.~Peipins.
+\newblock Cancer internet search activity on a major search engine, {United
+  States} 2001-2003.
+\newblock \emph{J Med Internet Res}, 7, 2005.
+\newblock URL \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1550657/}.
+
+\bibitem[Corley et~al.(2009)Corley, Mikler, Singh, and Cook]{Corley09}
+C.~D. Corley, A.~R. Mikler, K.~P. Singh, and D.~J. Cook.
+\newblock Monitoring influenza trends through mining social media.
+\newblock \emph{Proceedings of the 2009 International Conference on
+  Bioinformatics and Computational Biology (BIOCOMP09)}, 2009.
+\newblock URL \url{http://eecs.wsu.edu/~cook/pubs/biocomp09.pdf}.
+
+\bibitem[D$'$Amuri and Marcucci(2010)]{Damuri10}
+Francesco D$'$Amuri and Juri Marcucci.
+\newblock {G}oogle it! {F}orecasting the {US} unemployment rate with a {G}oogle
+  job search index.
+\newblock \emph{SSRN}, 2010.
+\newblock URL \url{http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1594132}.
+
+\bibitem[Ettredge et~al.(2005)Ettredge, Gerdes, and Karuga]{Ettredge05}
+M.~Ettredge, J.~Gerdes, and G.~Karuga.
+\newblock Using web-based search data to predict macroeconomic statistics.
+\newblock \emph{Communications of the ACM}, 48\penalty0 (11):\penalty0 87--92,
+  2005.
+\newblock URL \url{http://portal.acm.org/citation.cfm?id=1096010}.
+
+\bibitem[George and McCulloch(1997)]{George97}
+E.~I. George and R.~E. McCulloch.
+\newblock Approaches for {B}ayesian variable selection.
+\newblock \emph{Statistica Sinica}, 7:\penalty0 339--374, 1997.
+
+\bibitem[Ginsberg et~al.(2009)Ginsberg, Mohebbi, Patel, Brammer, Smolinski, and
+  Brilliant]{Ginsberg09}
+Jeremy Ginsberg, Matthew~H. Mohebbi, Rajan~S. Patel, Lynnette Brammer, Mark~S.
+  Smolinski, and Larry Brilliant.
+\newblock Detecting influenza epidemics using search engine query data.
+\newblock \emph{Nature}, pages 1012--1014, 2009.
+\newblock URL
+  \url{http://research.google.com/archive/papers/detecting-influenza-epidemics.pdf}.
+
+\bibitem[Goel et~al.(2010)Goel, Hofman, Lahaie, Pennock, and Watts]{Goel10}
+Sharad Goel, Jake~M. Hofman, S\'ebastien Lahaie, David~M. Pennock, and
+  Duncan~J. Watts.
+\newblock Predicting consumer behavior with web search.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 7\penalty0
+  (41):\penalty0 17486--17490, {Sep 27} 2010.
+\newblock \doi{10.1073/pnas.1005962107}.
+\newblock URL \url{http://www.pnas.org/content/early/2010/09/20/1005962107}.
+
+\bibitem[Guzman(2011)]{Guzman11}
+Giselle Guzman.
+\newblock Internet search behavior as an economic forecasting tool: the case of
+  inflation expectations.
+\newblock \emph{The Journal of Economic and Social Measurement}, September
+  2011.
+\newblock Forthcoming.
+
+\bibitem[Huang and Penna(2009)]{Huang10}
+Haifang Huang and Nicolas~Dell Penna.
+\newblock Constructing consumer sentiment index for {U.S.} using {G}oogle
+  searches.
+\newblock Technical report, University of Alberta, 2009.
+\newblock URL \url{http://econpapers.repec.org/paper/risalbaec/2009_5f026.htm}.
+
+\bibitem[Hulth et~al.(2009)Hulth, Rydevik, and Linde]{Hulth09}
+A.~Hulth, G.~Rydevik, and A.~Linde.
+\newblock Web queries as a source for syndromic surveillance.
+\newblock \emph{PLoS ONE}, 4, 2009.
+\newblock URL
+  \url{http://www.plosone.org/article/info:doi/10.1371/journal.pone.0004378}.
+
+\bibitem[Lindberg(2011)]{Lindberg11}
+Fredrik Lindberg.
+\newblock Nowcasting {S}wedish retail sales with {G}oogle search query data.
+\newblock Master's thesis, Stockholm University, 2011.
+\newblock URL
+  \url{http://www.ne.su.se/education/master/econ_master/year2_thesis/theses/02_lindberg_f.pdf}.
+
+\bibitem[McLaren and Shanbhoge(2011)]{BOE11}
+Nick McLaren and Rachana Shanbhoge.
+\newblock Using internet search data as economic indicators.
+\newblock \emph{Bank of England Quarterly Bulletin}, June 2011.
+\newblock URL
+  \url{http://www.bankofengland.co.uk/publications/quarterlybulletin/qb110206.pdf}.
+
+\bibitem[Nelson and Plosser(1982)]{Nelson82}
+Charles~R. Nelson and Charles~I. Plosser.
+\newblock Trends and random walks in macroeconomic time series: Some evidence
+  and implications.
+\newblock \emph{Journal of Monetary Economics}, 10:\penalty0 132--162, 1982.
+
+\bibitem[Pelat et~al.(2009)Pelat, Turbelin, Bar-Hen, Flahault, and
+  Valleron]{Turbelin09}
+C.~Pelat, C.~Turbelin, A.~Bar-Hen, A.~Flahault, and A-J. Valleron.
+\newblock More diseases tracked by using {G}oogle {T}rends.
+\newblock \emph{Emerg Infect Dis.}, 15:\penalty0 1327--8, 2009.
+\newblock URL \url{http://www.cdc.gov/eid/content/15/8/1327.htm}.
+
+\bibitem[Polgreen et~al.(2008)Polgreen, Chen, Pennock, and Nelson]{Polgreen08}
+P.~M. Polgreen, Y.~Chen, D.~M. Pennock, and F.~D. Nelson.
+\newblock Using internet searches for influenza surveillance.
+\newblock \emph{Clinical Infectious Diseases}, 47:\penalty0 1443--1448, 2008.
+\newblock URL \url{http://www.ncbi.nlm.nih.gov/pubmed/18954267}.
+
+\bibitem[Preis et~al.(2010)Preis, Reith, and Stanley]{Preis10}
+Tobias Preis, Daniel Reith, and H.~Eugene Stanley.
+\newblock Complex dynamics of our economic life on different scales: insights
+  from search engine query data.
+\newblock \emph{Phil. Trans. R. Soc. A}, pages 5707--5719, 2010.
+\newblock URL
+  \url{http://rsta.royalsocietypublishing.org/content/368/1933/5707}.
+
+\bibitem[Radinsky et~al.(2009)Radinsky, Davidovich, and Markovitch]{Radinsky09}
+Kira Radinsky, Sagie Davidovich, and Shaul Markovitch.
+\newblock Predicting the news of tomorrow using patterns in web search queries.
+\newblock \emph{Proceedings of the 2008 IEEE/WIC/ACM International Conference
+  on Web Intelligence (WI08)}, 2009.
+\newblock URL \url{http://portal.acm.org/citation.cfm?id=1487070}.
+
+\bibitem[Schmidt and Vosen(2009)]{Schmidt09}
+Torsten Schmidt and Simeon Vosen.
+\newblock Forecasting private consumption: Survey-based indicators vs. {G}oogle
+  {T}rends.
+\newblock Ruhr Economic Papers 0155, Rheinisch-Westf{\"a}lisches Institut
+  f{\"u}r Wirtschaftsforschung, Ruhr-Universit{\"a}t Bochum, Universit{\"a}t
+  Dortmund, Universit{\"a}t Duisburg-Essen, November 2009.
+\newblock URL \url{http://ideas.repec.org/p/rwi/repape/0155.html}.
+
+\bibitem[Shimshoni et~al.(2009)Shimshoni, Efron, and Matias]{Shimshoni10}
+Yair Shimshoni, Niv Efron, and Yossi Matias.
+\newblock On the predictiblity of {T}rends.
+\newblock Technical report, Google, 2009.
+\newblock URL
+  \url{http://googleresearch.blogspot.com/2009/08/on-predictability-of-search-trends.html}.
+
+\bibitem[Suhoy(2009)]{Suhoy09}
+Tanya Suhoy.
+\newblock Query indices and a 2008 downturn: {I}sraeli data.
+\newblock Technical report, Bank of Israel, 2009.
+\newblock URL
+  \url{http://www.bankisrael.gov.il/deptdata/mehkar/papers/dp0906e.pdf}.
+
+\bibitem[Valdivia and Monge-Corella(2010)]{Valdivia10}
+A.~Valdivia and S.~Monge-Corella.
+\newblock Diseases tracked by using {G}oogle {T}rends.
+\newblock \emph{Emerg Infect Dis}, 2010.
+\newblock URL \url{http://www.cdc.gov/EID/content/16/1/168.htm}.
+
+\bibitem[Wilson(2009)]{Wilson09}
+B.~J. Wilson.
+\newblock Early detection of disease outbreaks using the internet.
+\newblock \emph{CMAJ}, 2009.
+\newblock URL \url{http://www.cmaj.ca/cgi/content/full/180/8/829}.
+
+\bibitem[Wu and Brynjolfsson(2010)]{Wu10}
+Lynn Wu and Eric Brynjolfsson.
+\newblock The future of prediction: How {G}oogle searches foreshadow housing
+  prices and sales.
+\newblock Technical report, MIT, 2010.
+\newblock URL \url{http://www.nber.org/confer/2009/PRf09/Wu_Brynjolfsson.pdf}.
+
+\end{thebibliography}

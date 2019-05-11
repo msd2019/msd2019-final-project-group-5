@@ -1,0 +1,441 @@
+head	1.2;
+access;
+symbols;
+locks
+	hal:1.2; strict;
+comment	@# @;
+
+
+1.2
+date	2011.12.17.22.55.21;	author hal;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2011.09.13.01.06.29;	author hal;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@as submitted
+@
+text
+@% Name: Hal Varian
+% Title: Using Google Insights for Search for Economics Forecasting
+% URL: http://www.corp.google.com/~hal/Reports/2011
+% Email: hal%google.com
+
+@@TechReport{Askitas10,
+  author =       "Nikos Askitas and Klaus F. Zimmermann",
+  title =        "{G}oogle Econometrics and Unemployment Forecasting",
+  institution =  "SSRN 899",
+  year =         "2010",
+  URL =          "http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1465341",
+}
+
+@@TechReport{Baker11,
+  author =       "Scott Baker and Andry Fradkin",
+  title =        "What Drives Job Search? {E}vidence from {G}oogle Search
+                 Data",
+  institution =  "Stanford University",
+  year =         "2011",
+  URL =          "http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1811247",
+}
+
+@@Article{BOE11,
+  author =       "Nick McLaren and Rachana Shanbhoge",
+  title =        "Using internet search data as economic indicators",
+  journal =      "Bank of England Quarterly Bulletin",
+  year =         "2011",
+  month =        jun,
+  URL =          "http://www.bankofengland.co.uk/publications/quarterlybulletin/qb110206.pdf",
+}
+
+@@Article{Bollen11,
+  author =       "Johan Bollen and Huina Mao and Xiao-Jun Zeng",
+  title =        "Twitter mood predicts the stock market",
+  journal =      "Journal of Computational Science",
+  year =         "2011",
+  volume =       "2",
+  number =       "1",
+  pages =        "1--8",
+  month =        mar,
+  URL =          "http://www.battleofthequants.com/Research/sdarticle.pdf",
+}
+
+@@Article{Brownstein09,
+  title =        "Digital Disease Detection---Harnessing the Web for
+                 Public Health Surveillance",
+  author =       "John S. Brownstein and Clark C. Freifeld and Lawrence
+                 C. Madoff",
+  journal =      "New England Journal of Medicine",
+  year =         "2009",
+  URL =          "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2917042/",
+}
+
+@@TechReport{Bughin11a,
+  author =       "Jacques Bughin",
+  title =        "Nowcasting the {B}elgian Economy",
+  institution =  "McKinsey \& Company",
+  year =         "2011",
+  month =        "{July 26}",
+}
+
+@@TechReport{Bughin11b,
+  author =       "Jacques Bughin",
+  title =        "Online buzz and searches as telecom brand performance
+                 indicators",
+  institution =  "McKinsey \& Company",
+  year =         "2011",
+  month =        "{Juy 26}",
+}
+
+@@Article{Castle09,
+  author =       "Jennifer L. Castle and Nicholas W. P. Fawcett and
+                 David F. Hendry",
+  title =        "Nowcasting is not just contemporaneous forecasting",
+  journal =      "National Institute Economic Review",
+  year =         "2009",
+  volume =       "201",
+  number =       "1",
+  pages =        "71--89",
+  month =        oct,
+  URL =          "http://ner.sagepub.com/content/210/1/71.abstract",
+}
+
+@@TechReport{Castle10,
+  author =       "Jennifer L. Castle and Nicholas W. P. Fawcett and
+                 David F. Hendry",
+  title =        "Evaluating Automatic Model Selection",
+  institution =  "Department of Economics, University of Oxford",
+  number =       "474",
+  year =         "2010",
+  URL =          "http://economics.ouls.ox.ac.uk/14734/1/paper474.pdf",
+}
+
+@@Article{Chamberlain10,
+  author =       "G. Chamberlain",
+  title =        "Googling the present",
+  journal =      "Economic and Labor Market Review",
+  year =         "2010",
+  volume =       "4",
+  number =       "12",
+  note =         "Office of National Statistics",
+  URL =          "http://www.statistics.gov.uk/cci/article.asp?ID=2621",
+}
+
+@@TechReport{Choi09a,
+  author =       "Hyunyoung Choi and Hal Varian",
+  title =        "Predicting the Present with {G}oogle {T}rends",
+  institution =  "Google",
+  year =         "2009",
+  URL =          "http://google.com/googleblogs/pdfs/google_predicting_the_present.pdf",
+}
+
+@@TechReport{Choi09b,
+  author =       "Hyunyoung Choi and Hal Varian",
+  title =        "Predicting Initial Claims for Unemployment Insurance
+                 Using {G}oogle {T}rends",
+  institution =  "Google",
+  year =         "2009",
+  URL =          "http://research.google.com/archive/papers/initialclaimsUS.pdf",
+}
+
+@@Article{Cooper05,
+  author =       "C. Cooper and K. Mallon and S. Leadbetter and L.
+                 Pollack and L. Peipins",
+  title =        "Cancer internet search activity on a major search
+                 engine, {United States} 2001-2003",
+  journal =      "J Med Internet Res",
+  volume =       "7",
+  year =         "2005",
+  URL =          "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1550657/",
+}
+
+@@Article{Corley09,
+  author =       "C. D. Corley and A. R. Mikler and K. P. Singh and D.
+                 J. Cook",
+  title =        "Monitoring influenza trends through mining social
+                 media",
+  journal =      "Proceedings of the 2009 International Conference on
+                 Bioinformatics and Computational Biology (BIOCOMP09)",
+  year =         "2009",
+  URL =          "http://eecs.wsu.edu/~cook/pubs/biocomp09.pdf",
+}
+
+@@Article{Damuri10,
+  author =       "Francesco D$'$Amuri and Juri Marcucci",
+  title =        "{G}oogle It! {F}orecasting the {US} Unemployment Rate
+                 with a {G}oogle Job Search Index",
+  journal =      "SSRN",
+  year =         "2010",
+  URL =          "http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1594132",
+}
+
+@@Article{Economist09,
+  author =       "Anonymous09",
+  title =        "Googling the future",
+  journal =      "The Economist",
+  year =         "2009",
+  note =         "April 16",
+  URL =          "http://www.economist.com/node/13497048?story_id=E1_TPQJSDQR",
+}
+
+@@Article{Ettredge05,
+  author =       "M. Ettredge and J. Gerdes and G. Karuga",
+  title =        "Using web-based search data to predict macroeconomic
+                 statistics",
+  journal =      "Communications of the ACM",
+  year =         "2005",
+  volume =       "48",
+  number =       "11",
+  pages =        "87--92",
+  URL =          "http://portal.acm.org/citation.cfm?id=1096010",
+}
+
+@@TechReport{Fondeur,
+  author =       "Y. Fondeur and F. Karame\'e",
+  title =        "Can Google Data Help Now or Fore-casting French
+                 Unemployment",
+  institution =  "University of Evry Val d{’}Essonne)",
+  year =         "2011",
+  URL =          "http://erudite.u-pec.fr/c/document_library/get_file?uuid=39059222-f3c1-42f3-a19f-c2d2ff674fa1&groupId=10136",
+}
+
+@@Article{Ginsberg09,
+  author =       "Jeremy Ginsberg and Matthew H. Mohebbi and Rajan S.
+                 Patel and Lynnette Brammer and Mark S. Smolinski and
+                 Larry Brilliant",
+  title =        "Detecting influenza epidemics using search engine
+                 query data",
+  journal =      "Nature",
+  year =         "2009",
+  pages =        "1012--1014",
+  URL =          "http://research.google.com/archive/papers/detecting-influenza-epidemics.pdf",
+}
+
+@@Article{Goel10,
+  author =       "Sharad Goel and Jake M. Hofman and S\'ebastien Lahaie
+                 and David M. Pennock and Duncan J. Watts",
+  title =        "Predicting consumer behavior with web search",
+  journal =      "Proceedings of the National Academy of Sciences",
+  year =         "2010",
+  volume =       "7",
+  number =       "41",
+  pages =        "17486--17490",
+  month =        "{Sep 27}",
+  URL =          "http://www.pnas.org/content/early/2010/09/20/1005962107",
+  doi =          "10.1073/pnas.1005962107",
+}
+
+ @@article{George97,
+  author = {George, E. I. and McCulloch, R. E.},
+  title = {Approaches for {B}ayesian Variable Selection},
+  year = 1997,
+  journal = {Statistica Sinica},
+  volume = 7,
+  pages = {339--374}
+}
+
+@@Article{Guzman11,
+  author =       "Giselle Guzman",
+  title =        "Internet Search Behavior as an Economic Forecasting
+                 Tool: the Case of Inflation Expectations",
+  journal =      "The Journal of Economic and Social Measurement",
+  year =         "2011",
+  month =        sep,
+  note =         "Forthcoming",
+}
+
+@@Article{Harding10,
+  author =       "Robin Harding",
+  title =        "Google to map inflation using web data",
+  journal =      "Financial Times",
+  year =         "2010",
+  note =         "June 15",
+  URL =          "http://www.ft.com/cms/s/2/deeb985e-d55f-11df-8e86-00144feabdc0.html#axzz1PMfmCGgI",
+}
+
+@@TechReport{Huang10,
+  author =       "Haifang Huang and Nicolas Dell Penna",
+  title =        "Constructing Consumer Sentiment Index for {U.S.} Using
+                 {G}oogle Searches",
+  institution =  "University of Alberta",
+  year =         "2009",
+  URL =          "http://econpapers.repec.org/paper/risalbaec/2009_5f026.htm",
+}
+
+@@Article{Hulth09,
+  author =       "A. Hulth and G. Rydevik and A. Linde",
+  title =        "Web queries as a source for syndromic surveillance",
+  journal =      "PLoS ONE",
+  volume =       "4",
+  year =         "2009",
+  URL =          "http://www.plosone.org/article/info:doi/10.1371/journal.pone.0004378",
+}
+
+@@TechReport{Kholodilin11,
+  author =       "A Kholodilin and M. Podstawski and B. Siliverstoves",
+  title =        "Do Google Searches Help in Nowcasting Private
+                 Consumption? {A} Real-Time Evidence for the {US}",
+  institution =  "Deutsches Institut fur Wirtschaftsforschung Discussion
+                 Paper 997",
+  year =         "2011",
+  URL =          "http://www.diw.de/documents/publikationen/73/diw_01.c.356220.de/dp997.pdf",
+}
+
+@@MastersThesis{Lindberg11,
+  author =       "Fredrik Lindberg",
+  title =        "Nowcasting {S}wedish Retail Sales with {G}oogle Search
+                 Query Data",
+  school =       "Stockholm University",
+  year =         "2011",
+  URL =          "http://www.ne.su.se/education/master/econ_master/year2_thesis/theses/02_lindberg_f.pdf",
+}
+
+@@Article{Nelson82,
+  author =       "Charles R. Nelson and Charles I. Plosser",
+  title =        "Trends and Random Walks in Macroeconomic Time Series:
+                 Some Evidence and Implications",
+  journal =      "Journal of Monetary Economics",
+  year =         "1982",
+  volume =       "10",
+  pages =        "132--162",
+}
+
+@@Article{Polgreen08,
+  author =       "P. M. Polgreen and Y. Chen and D. M. Pennock and F. D.
+                 Nelson",
+  title =        "Using internet searches for influenza surveillance",
+  journal =      "Clinical Infectious Diseases",
+  volume =       "47",
+  pages =        "1443--1448",
+  year =         "2008",
+  URL =          "http://www.ncbi.nlm.nih.gov/pubmed/18954267",
+}
+
+@@Article{Preis10,
+  author =       "Tobias Preis and Daniel Reith and H. Eugene Stanley",
+  title =        "Complex dynamics of our economic life on different
+                 scales: insights from search engine query data",
+  journal =      "Phil. Trans. R. Soc. A",
+  year =         "2010",
+  pages =        "5707--5719",
+  URL =          "http://rsta.royalsocietypublishing.org/content/368/1933/5707",
+}
+
+@@Article{Radinsky09,
+  author =       "Kira Radinsky and Sagie Davidovich and Shaul
+                 Markovitch",
+  title =        "Predicting the News of Tomorrow Using Patterns in Web
+                 Search Queries",
+  journal =      "Proceedings of the 2008 IEEE/WIC/ACM International
+                 Conference on Web Intelligence (WI08)",
+  year =         "2009",
+  URL =          "http://portal.acm.org/citation.cfm?id=1487070",
+}
+
+@@TechReport{Schmidt09,
+  author =       "Torsten Schmidt and Simeon Vosen",
+  title =        "Forecasting Private Consumption: Survey-based
+                 Indicators vs. {G}oogle {T}rends",
+  year =         "2009",
+  month =        Nov,
+  institution =  "Rheinisch-Westf{\"a}lisches Institut f{\"u}r Wirtschaftsforschung, Ruhr-Universit{\"a}t Bochum, Universit{\"a}t Dortmund, Universit{\"a}t Duisburg-Essen",
+  type =         "Ruhr Economic Papers",
+  URL =          "http://ideas.repec.org/p/rwi/repape/0155.html",
+  number =       "0155"
+}
+
+@@TechReport{Shimshoni10,
+  author =       "Yair Shimshoni and Niv Efron and Yossi Matias",
+  title =        "On the Predictiblity of {T}rends",
+  institution =  "Google",
+  year =         "2009",
+  URL =          "http://googleresearch.blogspot.com/2009/08/on-predictability-of-search-trends.html",
+}
+
+@@TechReport{Suhoy09,
+  author =       "Tanya Suhoy",
+  title =        "Query indices and a 2008 downturn: {I}sraeli data",
+  institution =  "Bank of Israel",
+  year =         "2009",
+  URL =          "http://www.bankisrael.gov.il/deptdata/mehkar/papers/dp0906e.pdf",
+}
+
+@@TechReport{Swallow11,
+  author =       "Y. Carri\'ere-Swallow and F. Labb\'e",
+  title =        "Nowcastign with Google Trends in an Emerging Market",
+  institution =  "Working Papers Central Bank of Chilpe 588",
+  year =         "2011",
+  URL =          "http://ideas.repec.org/p/chb/bcchwp/588.html",
+}
+
+@@Article{Turbelin09,
+  author =       "C. Pelat and C. Turbelin and A. Bar-Hen and A.
+                 Flahault and A-J. Valleron",
+  title =        "More diseases tracked by using {G}oogle {T}rends",
+  journal =      "Emerg Infect Dis.",
+  year =         "2009",
+  volume =       "15",
+  pages =        "1327--8",
+  URL =          "http://www.cdc.gov/eid/content/15/8/1327.htm",
+}
+
+@@Article{Valdivia10,
+  author =       "A. Valdivia and S. Monge-Corella",
+  title =        "Diseases tracked by using {G}oogle {T}rends",
+  journal =      "Emerg Infect Dis",
+  year =         "2010",
+  URL =          "http://www.cdc.gov/EID/content/16/1/168.htm",
+}
+
+@@Article{Webb09,
+  author =       "G. K. Webb",
+  title =        "Internet search statistics as a source of business
+                 intelligence: searches on foreclosure as an estimate of
+                 actual home foreclosures",
+  journal =      "Issues in Information Systems",
+  year =         "2009",
+  volume =       "10",
+  number =       "2",
+  URL =          "http://www.iacis.org/iis/2009_iis/pdf/P2009_1169.pdf",
+}
+
+@@Article{Wilson09,
+  author =       "B. J. Wilson",
+  title =        "Early detection of disease outbreaks using the
+                 internet",
+  journal =      "CMAJ",
+  year =         "2009",
+  URL =          "http://www.cmaj.ca/cgi/content/full/180/8/829",
+}
+
+@@TechReport{Wu10,
+  author =       "Lynn Wu and Eric Brynjolfsson",
+  title =        "The Future of Prediction: How {G}oogle Searches
+                 Foreshadow Housing Prices and Sales",
+  institution =  "MIT",
+  year =         "2010",
+  URL =          "http://www.nber.org/confer/2009/PRf09/Wu_Brynjolfsson.pdf",
+}
+
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d16 1
+a16 1
+  title =        "What Drives Job Search? {E}vidence from Google Search
+d207 9
+@

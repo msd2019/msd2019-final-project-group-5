@@ -1,0 +1,9 @@
+deseas.St: deseasonalize weekly data using stl
+make-month.St: aggregate weeks to months
+
+
+raw-week.csv: raw weekly data
+deseas-week.csv: deseasonalized weekly data
+deseas-month.csv: deseasonalized monthly data
+
+
