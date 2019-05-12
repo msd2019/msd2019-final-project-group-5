@@ -1,0 +1,129 @@
+---
+title: "Exploration"
+author: "Jiayi Lily Ma (jm4303)"
+date: "5/11/2019"
+output: pdf_document
+---
+
+```{r}
+#detach("package:dplyr", unload=TRUE)
+library(dyn)
+library(here)
+source("oosf_exploration.R")
+
+#original data from paper
+dat <- read.csv("data/merged.csv")
+
+min.model <- lm(dat$sales~1,data = dat)
+full.model <- formula(lm(sales~suvs+insurance, data=dat))
+step(min.model,scope = full.model,direction = c("forward"))
+```
+
+Insurance predictor doesn't seem to be very useful on paper's data as AIC decreased by less than 1.
+
+```{r}
+#we try the same thing on our data: 2004-2008
+merged0408 <- read.csv("data/merged_04_08.csv")
+min.model <- lm(merged0408$sales~1,data = merged0408)
+full.model <- formula(lm(sales~suvs+insurance, data=merged0408))
+step(min.model,scope = full.model,direction = c("forward"))
+```
+
+In this case, insurance isn't useful at all. 
+
+Since insurance doesn't seem to be a useful predictor, we'll try a model without it. 
+
+We try: 
+$$y = \beta_0 + \beta_1y_{t-1} + \beta_2y_{t-1}^2 + \beta_3y_{t-12} + \beta_4suvs$$
+
+```{r}
+getModelandEvaluation2 <- function(data, print=1, dateBegin=NULL, dateEnd=NULL) {
+  zooObj <- zoo(data[,-1], as.Date(data[,1]))
+  y <- log(zooObj$sales)
+  x <- zooObj[, "suvs"]
+  
+  reg0 <- dyn$lm(y~lag(y,-1) + I(lag(y, -1)^2) + lag(y, -12))
+  reg1 <- dyn$lm(y~lag(y,-1)+I(lag(y, -1)^2)+lag(y,-12)+suvs,data=data)
+  
+  if(print == 1){
+    print(summary(reg0))
+    print(summary(reg1))
+  }
+  
+  z <- OutOfSampleForecast12_newModel(y,x,17)
+  print(MaeReport(z))
+  
+  if(!is.null(dateBegin) && !is.null(dateEnd)){
+    print("dates not null")
+    print(MaeReport(z,dateBegin, dateEnd))
+  }
+}
+```
+
+
+#Paper's data, new model
+```{r}
+getModelandEvaluation2(dat, dateBegin = "2007-12-01", dateEnd = "2009-06-30")
+```
+First, we observe that $y_{t-12}$ is the only significant predictor in the base model, compared to the paper's base model $y = \beta_0 + \beta_1y_{t-1} + \beta_2y_{t-12}$ where all the predictors except the intercept are significant. 
+
+The second observation is that in the model with suv Trend data, only $y_{t-12}$ and $suvs$ are significant. 
+
+Using this new model on the paper's data, we see that the overall MAE decreased by about 8.6% with the addition of Trend data; this is about 2% less than the model that the paper use. However, the MAE for the Recession years between "2007-12-01" and "2009-06-30" decreased by about 23%, which is 2% higher than the decrease of 21% the paper's model. 
+
+
+#Our data: 2004-2008, new model
+Note that this is the time period in which we were able to replicate the paper's results most closely.  
+```{r}
+getModelandEvaluation2(merged0408,  dateBegin = "2007-12-02", dateEnd = "2008-12-07")
+getModelandEvaluation2(dat, dateBegin = "2007-12-02", dateEnd = "2008-12-07")
+
+```
+This model improved overall MAE more than the previous model on our data (~13% vs ~10%). 
+
+Also, we see that in the same time period (in the midst of Recession), this new model gives a better MAE improvement than the original model, for both the paper's data and our data (~32% vs ~28%). 
+
+Since our investigation with the paper's model led us to suspect that Trend data helps improve MAE only in period of major economic turbulence, we check this speculation here with the new model by looking at the paper's data during non-recession years. We repeat that with our data too.  
+
+#Non-recession years
+```{r}
+getModelandEvaluation2(dat,  dateBegin = "2004-01-01", dateEnd = "2007-12-01")
+getModelandEvaluation2(merged0408,  dateBegin = "2004-01-04", dateEnd = "2007-12-02")
+```
+On the paper's data, we see that Trend data helps very little during non-recession years; MAE improved by about 2.8% (compared to the ~10% overall and ~21% during Recession.) On our data, Trend data didn't decrease MAE but rather increased it. 
+
+Here we rescale the Trend data using $log(x/100)$ to see if the same holds: 
+
+```{r}
+rescaled_merged0408 <- merged0408
+rescaled_merged0408$suvs <- log(merged0408$suvs/100)
+rescaled_merged0408$insurance <- log(merged0408$insurance/100)
+
+getModelandEvaluation2(rescaled_merged0408,  dateBegin = "2004-01-04", dateEnd = "2007-12-02")
+
+```
+
+Conclusion: This new model seems to be able to improve MAE more than the paper's model for economic turbulent period. 
+
+
+##Future exploration: 
+#Looking at another Google Trend category--Currencies
+Since we suspect Trend data helps only in time period of major economic changes, we want to check if 'currencies' is a useful predictor since it's a major indicator of economic activities. 
+```{r}
+merged0408_c <- read.csv("data/merged_04_08_c.csv")
+
+#we only look at the Recession period from 2007/06/03 - 2008/12/07 (since our data only goes up to 2008)
+row <- which(merged0408_c == "2007/06/03")
+small_merged <- merged0408_c[row:nrow(merged0408_c),]
+
+min.model <- lm(sales~1,data = small_merged)
+full.model <- formula(lm(sales~suvs+insurance+currencies, data=small_merged))
+step(min.model,scope = full.model,direction = c("forward"))
+
+#all 2004-2008 years
+min.model <- lm(sales~1,data = merged0408_c)
+full.model <- formula(lm(sales~suvs+insurance+currencies, data=merged0408_c))
+step(min.model,scope = full.model,direction = c("forward"))
+```
+
+'currencies' and 'insurance' seem to be a useful predictor in Recession years where as 'suvs' is not; this makes sense because during Recession, people don't have extra money to buy cars. But during normal times, three predictors seem to be useful in predicting sales. 
