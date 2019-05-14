@@ -18,3 +18,10 @@ touch insurance_14_19.csv
 mv sales_14_19.xls data/sales_14_19.xls 
 mv suvs_14_19.csv data/suvs_14_19.csv 
 mv insurance_14_19.csv data/insurance_14_19.csv
+
+
+
+
+
+suvs_16_19.csv 'https://trends.google.com/trends/api/widgetdata/multiline/csv?req=%7B%22time%22%3A%222016-01-01%202019-05-11%22%2C%22resolution%22%3A%22WEEK%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22country%22%3A%22US%22%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A610%7D%7D&token=APP6_UEAAAAAXNjWEwbObQ_4YK9PyON78ccERkRG31yD&tz=240'
+insurance_16_19.csv 'https://trends.google.com/trends/api/widgetdata/multiline/csv?req=%7B%22time%22%3A%222016-01-01%202019-05-11%22%2C%22resolution%22%3A%22WEEK%22%2C%22locale%22%3A%22en-US%22%2C%22comparisonItem%22%3A%5B%7B%22geo%22%3A%7B%22country%22%3A%22US%22%7D%7D%5D%2C%22requestOptions%22%3A%7B%22property%22%3A%22%22%2C%22backend%22%3A%22IZG%22%2C%22category%22%3A467%7D%7D&token=APP6_UEAAAAAXNjVzhX_gEjSdvacyhInrKyU9ju7mSb0&tz=240'
